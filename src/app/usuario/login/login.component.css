@@ -1,0 +1,63 @@
+/* Estilos personalizados para el formulario de inicio de sesión */
+section {
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .bg-primary {
+    background-color: #007bff;
+  }
+  
+  .card {
+    border-radius: 1rem;
+  }
+  
+  .logo-img {
+    max-width: 100px;
+    height: auto;
+    border: 5px solid #ffffff;
+  }
+  
+  .text-white {
+    color: #ffffff !important;
+  }
+  
+  .border-white {
+    border-color: #ffffff !important;
+  }
+  
+  .badge.bg-primary {
+    font-size: 1.5rem;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+  }
+  
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  button[type="submit"] {
+    padding: 0.75rem;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  }
+  
+  .text-primary {
+    color: #007bff;
+    transition: color 0.3s ease;
+  }
+  
+  .text-primary:hover {
+    color: #0056b3;
+    text-decoration: none;
+  }
+  
+  mat-icon {
+    cursor: pointer;
+  }
+  

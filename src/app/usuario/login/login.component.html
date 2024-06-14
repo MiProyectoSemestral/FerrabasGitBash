@@ -1,0 +1,65 @@
+<section class="p-3 p-md-4 p-xl-5">
+  <div class="container">
+    <div class="card border-light-subtle shadow-sm">
+      <div class="row g-0">
+        <div class="col-12 col-md-6 bg-primary text-white">
+          <div class="d-flex flex-column align-items-center justify-content-center h-100 p-3">
+            <img class="img-fluid rounded-circle mb-3 logo-img" loading="lazy" src="./assets/Icono.jpg" alt="Ferremas">
+            <h3 class="text-white text-center mb-3">Ferremas</h3>
+            <hr class="border-white mb-4 w-100">
+            <p class="text-center">
+              Todo en un solo lugar, al alcance de tu bolsillo.
+            </p>
+          </div>
+        </div>
+        <div class="col-12 col-md-6">
+          <div class="card-body p-3 p-md-4 p-xl-5">
+            <div class="row">
+              <div class="col-12">
+                <div class="mb-5">
+                  <h2 class="badge bg-primary text-wrap">Inicio de Sesión</h2>
+                </div>
+              </div>
+            </div>
+            <form [formGroup]="formLogin" (submit)="iniciarSesion()">
+              <div class="row gy-3 gy-md-4 overflow-hidden">
+                <div class="col-12">
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Email</mat-label>
+                    <mat-icon matPrefix>email</mat-icon>
+                    <input formControlName="email" matInput autocomplete="off" type="email" required>
+                  </mat-form-field>
+                </div>
+                <div class="col-12">
+                  <mat-form-field class="full-width" appearance="outline">
+                    <mat-label>Contraseña</mat-label>
+                    <mat-icon matPrefix>lock</mat-icon>
+                    <input [type]="hide ? 'password' : 'text'" formControlName="password" matInput autocomplete="off" required>
+                    <button mat-icon-button matSuffix type="button" (click)="hide = !hide">
+                      <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                  </mat-form-field>
+                </div>
+                <div class="col-12">
+                  <div class="d-grid">
+                    <button type="submit" mat-raised-button color="primary" [disabled]="!formLogin.valid">Iniciar Sesión</button>
+                  </div>
+                </div>
+              </div>
+            </form>
+            <div class="row mt-3">
+              <div class="col-12 text-center">
+                <a href="#" class="text-primary">¿Olvidaste tu contraseña?</a>
+              </div>
+              <div class="col-12 text-center">
+                <a href="#" class="text-primary">Crear una cuenta nueva</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<mat-progress-bar mode="indeterminate" *ngIf="mostrarLoading"></mat-progress-bar>

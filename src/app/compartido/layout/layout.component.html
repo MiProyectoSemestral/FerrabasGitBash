@@ -1,0 +1,87 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<mat-toolbar color="primary">
+    <button mat-icon-button (click)="sidenav.toggle()">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>FerremasWeb</span>
+    <span style="flex: 1 1 auto;;"></span>
+    <label style="font-size: 14px; margin-right: 20px;">{{email}}</label>
+          
+    <button  (click)="cerrarSesion()"><mat-icon>logout</mat-icon></button>
+     
+
+   
+    
+  </mat-toolbar>
+ 
+  <mat-sidenav-container  class="sidenav-container">
+    <mat-sidenav  #sidenav mode="side" class="sidenav" fixedInViewport>
+      <mat-nav-list style="margin-top: 50px;" >
+        <mat-list-item routerLink="/layout/dashboard" >
+            <mat-icon matListItemIcon style="color: rgb(11, 10, 10);" >dashboard</mat-icon>
+            <div matListItemTitle style="color: rgb(8, 7, 7);" >Dashboard</div>
+        </mat-list-item>
+
+        <mat-list-item routerLink="/layout/contacto">
+            <mat-icon matListItemIcon>contact_mail</mat-icon>
+            <div matListItemTitle>Contacto</div>
+          </mat-list-item>
+          
+          <mat-list-item routerLink="/layout/sobremi">
+            <mat-icon matListItemIcon>groups</mat-icon>
+            <div matListItemTitle>Quiénes Somos</div>
+          </mat-list-item>
+          
+          <mat-list-item routerLink="/layout/productos">
+            <mat-icon matListItemIcon>store</mat-icon>
+            <div matListItemTitle>Productos</div>
+          </mat-list-item>
+          
+          <mat-list-item routerLink="/layout/reporte">
+            <mat-icon matListItemIcon>bar_chart</mat-icon>
+            <div matListItemTitle>Reportes</div>
+          </mat-list-item>
+          
+          <mat-list-item routerLink="/layout/compras">
+            <mat-icon matListItemIcon>shopping_cart</mat-icon>
+            <div matListItemTitle>Pago</div>
+          </mat-list-item>
+          
+          <mat-list-item routerLink="/layout/inventario">
+            <mat-icon matListItemIcon>inventory</mat-icon>
+            <div matListItemTitle>Inventarios</div>
+          </mat-list-item>
+          <mat-list-item routerLink="/layout/crearUsuario">
+            <mat-icon matListItemIcon>account_circle</mat-icon>
+            <div matListItemTitle>Crear Usuario</div>
+          </mat-list-item>
+          
+        
+       
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <!-- Contenido principal de la aplicación -->
+      <div class="content">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  

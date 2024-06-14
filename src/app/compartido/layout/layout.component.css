@@ -1,0 +1,45 @@
+.sidenav-container {
+    height: 100vh;
+  }
+  
+  .sidenav {
+    width: 250px;
+  }
+  
+  .mat-toolbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+  }
+  
+  .mat-sidenav-content {
+    margin-top: 64px; /* Altura de la barra de herramientas */
+    padding: 16px;
+    color: rgb(20, 20, 20);
+  }
+  
+  .content {
+    padding: 16px;
+  }
+  
+  .logout {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+  }
+  
+  .mat-list-icon {
+    min-width: 40px;
+  }
+  
+  .mat-list-item {
+    display: flex;
+    align-items: center;
+  }
+  
+  .mat-list-item mat-icon {
+    margin-right: 16px; /* Ajusta este valor para cambiar el espacio entre el ícono y el texto */
+  }
+  
