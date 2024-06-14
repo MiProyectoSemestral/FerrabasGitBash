@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { DetallePedido } from 'src/app/usuario/interfaces/DetallePedido';
+import { Pedido } from 'src/app/usuario/interfaces/Pedido';
 import { Producto } from 'src/app/usuario/interfaces/Producto';
 import { ProductoService } from 'src/app/usuario/servicios/producto.service';
 
@@ -12,10 +13,13 @@ import { ProductoService } from 'src/app/usuario/servicios/producto.service';
 export class DashboardComponent {
 
   productos: Producto[] = [];
+  pedidos: Pedido[] = [];
+
   selectedProducto: Producto | null = null;
   newProducto: Producto = { id: 0, nombre: '', precio: 0, stock: 0 };
   carrito: DetallePedido[] = [];
-
+  mensaje: string = '';
+  total: number = 0;
   constructor(private productoService: ProductoService) {}
 
   ngOnInit(): void {
@@ -72,8 +76,11 @@ export class DashboardComponent {
       precio: producto.precio
     };
     this.carrito.push(detalle);
+    
   }
-
+   actualizarTotal() {
+    this.total = this.productos.reduce((acc, pedido) => acc + pedido.precio, 0.0);
+  }
   generarCompra(): void {
     this.productoService.generarCompra(this.carrito).subscribe(
       response => {
