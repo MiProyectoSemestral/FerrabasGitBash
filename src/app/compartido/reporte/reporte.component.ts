@@ -24,32 +24,40 @@ export class ReporteComponent implements OnInit {
   getInventarioReporte(): void {
     this.reporteService.getInventarioReporte().subscribe(data => {
       this.inventario = data;
+      console.log(this.inventario);
+
     }, error => {
-      console.error('Error fetching inventario report:', error);
+      console.error('Error inventario report:', error);
     });
   }
 
   getUsuariosReporte(): void {
     this.reporteService.getUsuariosReporte().subscribe(data => {
       this.usuarios = data;
+      console.log(this.usuarios);
+
     }, error => {
-      console.error('Error fetching usuarios report:', error);
+      console.error('Error usuarios report:', error);
     });
   }
 
   getComprasRealizadasReporte(): void {
     this.reporteService.getComprasRealizadasReporte().subscribe(data => {
       this.comprasRealizadas = data;
+      console.log(this.comprasRealizadas);
+
     }, error => {
-      console.error('Error fetching compras realizadas report:', error);
+      console.error('Error compras realizadas report:', error);
     });
   }
 
   getPedidosRealizadosReporte(): void {
     this.reporteService.getPedidosRealizadosReporte().subscribe(data => {
       this.pedidosRealizados = data;
+      console.log(this.pedidosRealizados);
+
     }, error => {
-      console.error('Error fetching pedidos realizados report:', error);
+      console.error('Error  pedidos realizados report:', error);
     });
   }
 }

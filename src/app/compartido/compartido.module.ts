@@ -35,7 +35,8 @@ import { SobremiComponent } from './sobremi/sobremi.component';
     MaterialModule,
     LayoutRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    
     
   ],
   exports: [

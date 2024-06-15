@@ -19,19 +19,19 @@ export class ReporteService {
 
   getUsuariosReporte(): Observable<any[]> {
     return this.http.get<any>(`${this.baseUrl}/Usuarios`).pipe(
-      map(response => response.$values || response)
+      map(response => response.$values)
     );
   }
 
   getComprasRealizadasReporte(): Observable<any[]> {
     return this.http.get<any>(`${this.baseUrl}/ComprasRealizadas`).pipe(
-      map(response => response.$values || response)
+      map(response => response.$values)
     );
   }
 
   getPedidosRealizadosReporte(): Observable<any[]> {
     return this.http.get<any>(`${this.baseUrl}/PedidosRealizados`).pipe(
-      map(response => response.$values || response)
+      map(response => response.$values)
     );
   }
 }
